@@ -1,0 +1,90 @@
+[
+	{
+		"name": "Basic Line",
+		"price": "0",
+		"get_in": "初期装備",
+		"LCK": "0",
+		"STR": "0",
+		"EXP": "0",
+		"ATT": "0",
+		"BIG": "0",
+		"MXW": "0"
+	},
+	{
+		"name": "Aquamarine Line",
+		"price": "100",
+		"get_in": "Coconut Bay",
+		"LCK": "0",
+		"STR": "0",
+		"EXP": "0",
+		"ATT": "5",
+		"BIG": "0",
+		"MXW": "0"
+	},
+	{
+		"name": "Carbon Line",
+		"price": "1000",
+		"get_in": "Coconut Bay",
+		"LCK": "0",
+		"STR": "7",
+		"EXP": "7",
+		"ATT": "0",
+		"BIG": "0",
+		"MXW": "0"
+	},
+	{
+		"name": "Heavy Duty Line",
+		"price": "4000",
+		"get_in": "Crescent Isle",
+		"LCK": "0",
+		"STR": "10",
+		"EXP": "10",
+		"ATT": "0",
+		"BIG": "10",
+		"MXW": "0"
+	},
+	{
+		"name": "Flavored Line",
+		"price": "10000",
+		"get_in": "Tanglewood",
+		"LCK": "0",
+		"STR": "0",
+		"EXP": "0",
+		"ATT": "0",
+		"BIG": "30",
+		"MXW": "0"
+	},
+	{
+		"name": "Lucky Line",
+		"price": "10000",
+		"get_in": "Crescent Isle",
+		"LCK": "30",
+		"STR": "0",
+		"EXP": "0",
+		"ATT": "0",
+		"BIG": "0",
+		"MXW": "0"
+	},
+	{
+		"name": "Diamond Line",
+		"price": "25000",
+		"get_in": "Luxian Dunes",
+		"LCK": "25",
+		"STR": "15",
+		"EXP": "15",
+		"ATT": "10",
+		"BIG": "0",
+		"MXW": "0"
+	},
+	{
+		"name": "Fur of Cerberus",
+		"price": "35000",
+		"get_in": "Vlad",
+		"LCK": "25",
+		"STR": "-5",
+		"EXP": "-15",
+		"ATT": "20",
+		"BIG": "10",
+		"MXW": "0"
+	}
+]

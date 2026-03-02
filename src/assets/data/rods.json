@@ -1,0 +1,167 @@
+[
+	{
+		"name": "Stick and String",
+		"price": "0",
+		"get_in": "初期装備",
+		"LCK": "-50",
+		"STR": "0",
+		"EXP": "0",
+		"ATT": "0",
+		"BIG": "-100",
+		"MXW": "5"
+	},
+	{
+		"name": "Toy Rod",
+		"price": "750",
+		"get_in": "Coconut Bay",
+		"LCK": "0",
+		"STR": "0",
+		"EXP": "0",
+		"ATT": "0",
+		"BIG": "0",
+		"MXW": "15"
+	},
+	{
+		"name": "Sturdy Wooden Rod",
+		"price": "2000",
+		"get_in": "Coconut Bay",
+		"LCK": "15",
+		"STR": "0",
+		"EXP": "5",
+		"ATT": "20",
+		"BIG": "0",
+		"MXW": "30"
+	},
+	{
+		"name": "Sunleaf Rod",
+		"price": "0",
+		"get_in": "魚100匹売却",
+		"LCK": "10",
+		"STR": "5",
+		"EXP": "10",
+		"ATT": "25",
+		"BIG": "15",
+		"MXW": "250"
+	},
+	{
+		"name": "Slim Rod",
+		"price": "10000",
+		"get_in": "Coconut Bay",
+		"LCK": "20",
+		"STR": "10",
+		"EXP": "10",
+		"ATT": "25",
+		"BIG": "20",
+		"MXW": "500"
+	},
+	{
+		"name": "Metallic Rod",
+		"price": "15000",
+		"get_in": "Coconut Bay",
+		"LCK": "0",
+		"STR": "55",
+		"EXP": "55",
+		"ATT": "10",
+		"BIG": "10",
+		"MXW": "1000"
+	},
+	{
+		"name": "Telescopic Rod",
+		"price": "15000",
+		"get_in": "Coconut Bay",
+		"LCK": "10",
+		"STR": "15",
+		"EXP": "15",
+		"ATT": "10",
+		"BIG": "5",
+		"MXW": "2005"
+	},
+	{
+		"name": "Darkwood Rod",
+		"price": "25000",
+		"get_in": "Tanglewood",
+		"LCK": "30",
+		"STR": "10",
+		"EXP": "10",
+		"ATT": "30",
+		"BIG": "5",
+		"MXW": "1800"
+	},
+	{
+		"name": "Speedy Rod",
+		"price": "55000",
+		"get_in": "Crescent Isle",
+		"LCK": "20",
+		"STR": "5",
+		"EXP": "5",
+		"ATT": "55",
+		"BIG": "0",
+		"MXW": "1500"
+	},
+	{
+		"name": "Fortunate Rod",
+		"price": "75000",
+		"get_in": "Crescent Isle",
+		"LCK": "100",
+		"STR": "10",
+		"EXP": "5",
+		"ATT": "10",
+		"BIG": "77",
+		"MXW": "1500"
+	},
+	{
+		"name": "Alien Rod",
+		"price": "200000",
+		"get_in": "クエスト",
+		"LCK": "50",
+		"STR": "10",
+		"EXP": "5",
+		"ATT": "40",
+		"BIG": "30",
+		"MXW": "32000"
+	},
+	{
+		"name": "Rustfang Rod",
+		"price": "250000",
+		"get_in": "Luxian Dunes",
+		"LCK": "70",
+		"STR": "20",
+		"EXP": "20",
+		"ATT": "25",
+		"BIG": "35",
+		"MXW": "35000"
+	},
+	{
+		"name": "Runesteel Rod",
+		"price": "700000",
+		"get_in": "Vlad",
+		"LCK": "90",
+		"STR": "25",
+		"EXP": "20",
+		"ATT": "30",
+		"BIG": "40",
+		"MXW": "100000"
+	},
+	{
+		"name": "Rod of the Pharaoh",
+		"price": "750000",
+		"get_in": "Luxian Dunes",
+		"LCK": "222",
+		"STR": "20",
+		"EXP": "40",
+		"ATT": "-10",
+		"BIG": "35",
+		"MXW": "100000"
+	},
+	{
+		"name": "Rod of Perpetuity",
+		"price": "0",
+		"get_in": "レベル500",
+		"LCK": "130",
+		"STR": "30",
+		"EXP": "30",
+		"ATT": "50",
+		"BIG": "10",
+		"MXW": "1000000"
+	}
+]

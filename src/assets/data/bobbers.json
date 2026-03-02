@@ -1,0 +1,90 @@
+[
+	{
+		"name": "Basic Bobber",
+		"price": "0",
+		"get_in": "初期装備",
+		"LCK": "0",
+		"STR": "0",
+		"EXP": "0",
+		"ATT": "0",
+		"BIG": "0",
+		"MXW": "0"
+	},
+	{
+		"name": "Paulie's Bobber",
+		"price": "0",
+		"get_in": "クエスト",
+		"LCK": "0",
+		"STR": "0",
+		"EXP": "5",
+		"ATT": "5",
+		"BIG": "0",
+		"MXW": "0"
+	},
+	{
+		"name": "Blue Bobber",
+		"price": "100",
+		"get_in": "Coconut Bay",
+		"LCK": "5",
+		"STR": "0",
+		"EXP": "0",
+		"ATT": "0",
+		"BIG": "0",
+		"MXW": "0"
+	},
+	{
+		"name": "Dud Bobber",
+		"price": "1000",
+		"get_in": "Crescent Isle",
+		"LCK": "5",
+		"STR": "0",
+		"EXP": "5",
+		"ATT": "0",
+		"BIG": "0",
+		"MXW": "0"
+	},
+	{
+		"name": "Feline Bobber",
+		"price": "2000",
+		"get_in": "Tanglewood",
+		"LCK": "5",
+		"STR": "0",
+		"EXP": "0",
+		"ATT": "0",
+		"BIG": "10",
+		"MXW": "0"
+	},
+	{
+		"name": "Ornamental Bobber",
+		"price": "10000",
+		"get_in": "Luxian Dunes",
+		"LCK": "10",
+		"STR": "5",
+		"EXP": "0",
+		"ATT": "10",
+		"BIG": "0",
+		"MXW": "0"
+	},
+	{
+		"name": "Lucky Bobber",
+		"price": "10000",
+		"get_in": "Luxian Dunes",
+		"LCK": "40",
+		"STR": "0",
+		"EXP": "0",
+		"ATT": "0",
+		"BIG": "0",
+		"MXW": "0"
+	},
+	{
+		"name": "Rainbow Slime Bobber",
+		"price": "35000",
+		"get_in": "Vlad",
+		"LCK": "30",
+		"STR": "10",
+		"EXP": "0",
+		"ATT": "10",
+		"BIG": "10",
+		"MXW": "0"
+	}
+]
