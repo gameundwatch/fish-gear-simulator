@@ -60,69 +60,71 @@
 	);
 </script>
 
-<main class="w-full max-w-4xl h-screen max-h-128 flex flex-col gap-8 px-4">
-	<div class="grid grid-cols-3 gap-4">
-		<Card.Root>
-			<Card.Header>
-				<h2 class="text-xl font-bold">Rod</h2>
-			</Card.Header>
-			<Card.Content>
-				<Select.Root type="single" bind:value={selected_rod}>
-					<Select.Trigger>
-						{rodTriggerContent}
-					</Select.Trigger>
-					<Select.Content>
-						{#each rods as rod (rod.name)}
-							<Select.Item value={rod.name}>{rod.name}</Select.Item>
-						{/each}
-					</Select.Content>
-				</Select.Root>
-			</Card.Content>
-		</Card.Root>
-		<Card.Root>
-			<Card.Header>
-				<h2 class="text-xl font-bold">Line</h2>
-			</Card.Header>
-			<Card.Content>
-				<Select.Root type="single" bind:value={selected_line}>
-					<Select.Trigger>
-						{lineTriggerContent}
-					</Select.Trigger>
-					<Select.Content>
-						{#each lines as line (line.name)}
-							<Select.Item value={line.name}>{line.name}</Select.Item>
-						{/each}
-					</Select.Content>
-				</Select.Root>
-			</Card.Content>
-		</Card.Root>
-		<Card.Root>
-			<Card.Header>
-				<h2 class="text-xl font-bold">Bobber</h2>
-			</Card.Header>
-			<Card.Content>
-				<Select.Root type="single" bind:value={selected_bobber}>
-					<Select.Trigger>
-						{bobberTriggerContent}
-					</Select.Trigger>
-					<Select.Content>
-						{#each bobbers as bobber (bobber.name)}
-							<Select.Item value={bobber.name}>{bobber.name}</Select.Item>
-						{/each}
-					</Select.Content>
-				</Select.Root>
-			</Card.Content>
-		</Card.Root>
-	</div>
-	<div>
-		<Card.Root>
-			<Card.Header>
-				<h2 class="text-xl font-bold">Final Stats</h2>
-			</Card.Header>
-			<Card.Content class="grid grid-cols-2">
-				<StatsTable {luck} {strength} {expertise} {attractionRate} {bigCatchRate} {maxWeight} />
-			</Card.Content>
-		</Card.Root>
-		<div></div>
+<main class="w-full max-w-4xl h-screen max-h-128 px-4">
+	<h1 class="my-2 text-2xl font-bold">FISH! Gear Stats Simulator</h1>
+	<div class="grid grid-cols-2 gap-8">
+		<div class="grid grid-cols-1 gap-4">
+			<Card.Root>
+				<Card.Header>
+					<h2 class="text-xl font-bold">🎣 Rod</h2>
+				</Card.Header>
+				<Card.Content>
+					<Select.Root type="single" bind:value={selected_rod}>
+						<Select.Trigger>
+							{rodTriggerContent}
+						</Select.Trigger>
+						<Select.Content>
+							{#each rods as rod (rod.name)}
+								<Select.Item value={rod.name}>{rod.name}</Select.Item>
+							{/each}
+						</Select.Content>
+					</Select.Root>
+				</Card.Content>
+			</Card.Root>
+			<Card.Root>
+				<Card.Header>
+					<h2 class="text-xl font-bold">🧵 Line</h2>
+				</Card.Header>
+				<Card.Content>
+					<Select.Root type="single" bind:value={selected_line}>
+						<Select.Trigger>
+							{lineTriggerContent}
+						</Select.Trigger>
+						<Select.Content>
+							{#each lines as line (line.name)}
+								<Select.Item value={line.name}>{line.name}</Select.Item>
+							{/each}
+						</Select.Content>
+					</Select.Root>
+				</Card.Content>
+			</Card.Root>
+			<Card.Root>
+				<Card.Header>
+					<h2 class="text-xl font-bold">🪀 Bobber</h2>
+				</Card.Header>
+				<Card.Content>
+					<Select.Root type="single" bind:value={selected_bobber}>
+						<Select.Trigger>
+							{bobberTriggerContent}
+						</Select.Trigger>
+						<Select.Content>
+							{#each bobbers as bobber (bobber.name)}
+								<Select.Item value={bobber.name}>{bobber.name}</Select.Item>
+							{/each}
+						</Select.Content>
+					</Select.Root>
+				</Card.Content>
+			</Card.Root>
+		</div>
+		<div>
+			<Card.Root>
+				<Card.Header>
+					<h2 class="text-xl font-bold">Final Stats</h2>
+				</Card.Header>
+				<Card.Content class="grid grid-cols-1">
+					<StatsTable {luck} {strength} {expertise} {attractionRate} {bigCatchRate} {maxWeight} />
+				</Card.Content>
+			</Card.Root>
+		</div>
 	</div>
 </main>

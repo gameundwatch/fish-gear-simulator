@@ -19,7 +19,7 @@
 		</Table.Row>
 		<Table.Row>
 			<Table.Cell class="font-semibold">Attraction Rate</Table.Cell>
-			<Table.Cell class="text-right">{attractionRate}</Table.Cell>
+			<Table.Cell class="text-right">{Math.min(attractionRate, 100)}</Table.Cell>
 		</Table.Row>
 		<Table.Row>
 			<Table.Cell class="font-semibold">Big Catch Rate</Table.Cell>
