@@ -27,7 +27,7 @@
 		</Table.Row>
 		<Table.Row>
 			<Table.Cell class="font-semibold">Max Weight</Table.Cell>
-			<Table.Cell class="text-right">{maxWeight}</Table.Cell>
+			<Table.Cell class="text-right">{maxWeight.toLocaleString()}</Table.Cell>
 		</Table.Row>
 	</Table.Body>
 </Table.Root>
