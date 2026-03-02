@@ -9,9 +9,20 @@
 
 	import StatsTable from '$lib/components/statsTable.svelte';
 
-	const rods = RODS_JSON;
-	const lines = LINES_JSON;
-	const bobbers = BOBBERS_JSON;
+	const parse = (raw: typeof RODS_JSON) =>
+		raw.map((r) => ({
+			name: r.name,
+			luck: Number(r.luck),
+			strength: Number(r.strength),
+			expertise: Number(r.expertise),
+			attractionRate: Number(r.attraction_rate),
+			bigCatchRate: Number(r.big_catch_rate),
+			maxWeight: Number(r.max_weight),
+		}));
+
+	const rods = parse(RODS_JSON);
+	const lines = parse(LINES_JSON);
+	const bobbers = parse(BOBBERS_JSON);
 
 	let selected_rod: string = $state('');
 	let selected_line: string = $state('');
@@ -25,6 +36,27 @@
 	);
 	const bobberTriggerContent = $derived(
 		bobbers.find((b) => b.name === selected_bobber)?.name ?? 'select a bobber'
+	);
+
+	const rod = $derived(rods.find((r) => r.name === selected_rod));
+	const line = $derived(lines.find((l) => l.name === selected_line));
+	const bobber = $derived(bobbers.find((b) => b.name === selected_bobber));
+
+	const luck: number = $derived((rod?.luck ?? 0) + (line?.luck ?? 0) + (bobber?.luck ?? 0));
+	const strength: number = $derived(
+		(rod?.strength ?? 0) + (line?.strength ?? 0) + (bobber?.strength ?? 0)
+	);
+	const expertise: number = $derived(
+		(rod?.expertise ?? 0) + (line?.expertise ?? 0) + (bobber?.expertise ?? 0)
+	);
+	const attractionRate: number = $derived(
+		(rod?.attractionRate ?? 0) + (line?.attractionRate ?? 0) + (bobber?.attractionRate ?? 0)
+	);
+	const bigCatchRate: number = $derived(
+		(rod?.bigCatchRate ?? 0) + (line?.bigCatchRate ?? 0) + (bobber?.bigCatchRate ?? 0)
+	);
+	const maxWeight: number = $derived(
+		(rod?.maxWeight ?? 0) + (line?.maxWeight ?? 0) + (bobber?.maxWeight ?? 0)
 	);
 </script>
 
@@ -88,7 +120,7 @@
 				<h2 class="text-xl font-bold">Final Stats</h2>
 			</Card.Header>
 			<Card.Content class="grid grid-cols-2">
-				<StatsTable />
+				<StatsTable {luck} {strength} {expertise} {attractionRate} {bigCatchRate} {maxWeight} />
 			</Card.Content>
 		</Card.Root>
 		<div></div>
