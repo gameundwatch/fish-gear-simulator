@@ -7,36 +7,36 @@ import svelteParser from 'svelte-eslint-parser';
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
-  js.configs.recommended,
-  ...svelte.configs.recommended,
-  {
-    languageOptions: {
-      globals: {
-        ...globals.browser,
-        ...globals.node,
-      },
-    },
-  },
-  {
-    files: ['**/*.ts'],
-    languageOptions: {
-      parser: tsParser,
-    },
-    plugins: { '@typescript-eslint': ts },
-    rules: {
-      ...ts.configs.recommended.rules,
-    },
-  },
-  {
-    files: ['**/*.svelte'],
-    languageOptions: {
-      parser: svelteParser,
-      parserOptions: {
-        parser: tsParser,
-      },
-    },
-  },
-  {
-    ignores: ['.svelte-kit/', 'build/', 'dist/'],
-  },
+	js.configs.recommended,
+	...svelte.configs.recommended,
+	{
+		languageOptions: {
+			globals: {
+				...globals.browser,
+				...globals.node,
+			},
+		},
+	},
+	{
+		files: ['**/*.ts'],
+		languageOptions: {
+			parser: tsParser,
+		},
+		plugins: { '@typescript-eslint': ts },
+		rules: {
+			...ts.configs.recommended.rules,
+		},
+	},
+	{
+		files: ['**/*.svelte'],
+		languageOptions: {
+			parser: svelteParser,
+			parserOptions: {
+				parser: tsParser,
+			},
+		},
+	},
+	{
+		ignores: ['.svelte-kit/', 'build/', 'dist/'],
+	},
 ];

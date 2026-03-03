@@ -19,11 +19,11 @@ pnpm dev
 
 ## Commands
 
-| コマンド | 内容 |
-|---|---|
-| `pnpm dev` | 開発サーバー起動 |
-| `pnpm build` | プロダクションビルド |
+| コマンド       | 内容                   |
+| -------------- | ---------------------- |
+| `pnpm dev`     | 開発サーバー起動       |
+| `pnpm build`   | プロダクションビルド   |
 | `pnpm preview` | ビルド結果のプレビュー |
-| `pnpm check` | 型チェック |
-| `pnpm lint` | ESLint |
-| `pnpm format` | Prettier |
+| `pnpm check`   | 型チェック             |
+| `pnpm lint`    | ESLint                 |
+| `pnpm format`  | Prettier               |
