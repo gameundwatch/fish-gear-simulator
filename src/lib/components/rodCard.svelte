@@ -2,10 +2,12 @@
 	import * as Card from '$lib/components/ui/card';
 	import * as Select from '$lib/components/ui/select';
 
-	let selected_rod_enchant = $state('');
-	const rod_enchant_names = ['none', 'bbb', 'ccc'];
-
-	let { rod_names, selected_rod = $bindable() } = $props();
+	let {
+		rod_names,
+		selected_rod = $bindable(),
+		rod_enchant_names,
+		selected_rod_enchant = $bindable(),
+	} = $props();
 	const rodTrigger = $derived(rod_names.find((r: string) => r === selected_rod) ?? 'select a rod');
 	const rodEnchantTrigger = $derived(
 		rod_enchant_names.find((r: string) => r === selected_rod_enchant) ?? 'select a enchant'

@@ -1,0 +1,112 @@
+[
+	{
+		"name": "Lucky",
+		"grade": "common",
+		"luck": "15",
+		"strength": "0",
+		"expertise": "0",
+		"attraction_rate": "0",
+		"big_catch_rate": "0",
+		"max_weight": "0",
+		"other": ""
+	},
+	{
+		"name": "Powerful",
+		"grade": "common",
+		"luck": "0",
+		"strength": "10",
+		"expertise": "0",
+		"attraction_rate": "0",
+		"big_catch_rate": "10",
+		"max_weight": "0",
+		"other": ""
+	},
+	{
+		"name": "Expert",
+		"grade": "common",
+		"luck": "0",
+		"strength": "0",
+		"expertise": "10",
+		"attraction_rate": "0",
+		"big_catch_rate": "10",
+		"max_weight": "0",
+		"other": ""
+	},
+	{
+		"name": "Speedy",
+		"grade": "common",
+		"luck": "0",
+		"strength": "0",
+		"expertise": "0",
+		"attraction_rate": "10",
+		"big_catch_rate": "0",
+		"max_weight": "0",
+		"other": ""
+	},
+	{
+		"name": "Big Catch Boost",
+		"grade": "common",
+		"luck": "0",
+		"strength": "0",
+		"expertise": "0",
+		"attraction_rate": "0",
+		"big_catch_rate": "10",
+		"max_weight": "0",
+		"other": ""
+	},
+	{
+		"name": "Reinforced",
+		"grade": "common",
+		"luck": "0",
+		"strength": "0",
+		"expertise": "0",
+		"attraction_rate": "0",
+		"big_catch_rate": "0",
+		"max_weight": "400",
+		"other": ""
+	},
+	{
+		"name": "Trash Wrangler",
+		"grade": "common",
+		"luck": "-100",
+		"strength": "0",
+		"expertise": "0",
+		"attraction_rate": "20",
+		"big_catch_rate": "0",
+		"max_weight": "0",
+		"other": ""
+	},
+	{
+		"name": "Curious",
+		"grade": "common",
+		"luck": "0",
+		"strength": "0",
+		"expertise": "15",
+		"attraction_rate": "0",
+		"big_catch_rate": "10",
+		"max_weight": "0",
+		"other": "+5 EXP"
+	},
+	{
+		"name": "Lazy",
+		"grade": "common",
+		"luck": "10",
+		"strength": "10",
+		"expertise": "75",
+		"attraction_rate": "-75",
+		"big_catch_rate": "10",
+		"max_weight": "0",
+		"other": ""
+	},
+	{
+		"name": "Pocket Watcher",
+		"grade": "common",
+		"luck": "0",
+		"strength": "0",
+		"expertise": "0",
+		"attraction_rate": "0",
+		"big_catch_rate": "0",
+		"max_weight": "0",
+		"other": "5% Money"
+	}
+]

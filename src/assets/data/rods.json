@@ -2,7 +2,7 @@
 	{
 		"name": "Stick and String",
 		"price": "0",
-		"get_in": "初期装備",
+		"get_in": "",
 		"luck": "-50",
 		"strength": "0",
 		"expertise": "0",
@@ -35,7 +35,7 @@
 	{
 		"name": "Sunleaf Rod",
 		"price": "0",
-		"get_in": "魚100匹売却",
+		"get_in": "sell 100 fishes",
 		"luck": "10",
 		"strength": "5",
 		"expertise": "10",
@@ -112,7 +112,7 @@
 	{
 		"name": "Alien Rod",
 		"price": "200000",
-		"get_in": "クエスト",
+		"get_in": "quest",
 		"luck": "50",
 		"strength": "10",
 		"expertise": "5",
@@ -156,7 +156,7 @@
 	{
 		"name": "Rod of Perpetuity",
 		"price": "0",
-		"get_in": "レベル500",
+		"get_in": "reach Lv500",
 		"luck": "130",
 		"strength": "30",
 		"expertise": "30",
