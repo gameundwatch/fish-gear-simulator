@@ -9,6 +9,7 @@
 
 	import StatsTable from '$lib/components/statsTable.svelte';
 	import RodCard from '$lib/components/rodCard.svelte';
+	import LineCard from '$lib/components/lineCard.svelte';
 
 	const parse = (raw: typeof RODS_JSON) =>
 		raw.map((r) => ({
@@ -25,16 +26,10 @@
 	const lines = parse(LINES_JSON);
 	const bobbers = parse(BOBBERS_JSON);
 
-	const line_names = lines.map((l) => l.name);
-	const bobber_names = bobbers.map((b) => b.name);
-
 	let selected_rod: string = $state('');
 	let selected_line: string = $state('');
 	let selected_bobber: string = $state('');
 
-	const lineTriggerContent = $derived(
-		lines.find((l) => l.name === selected_line)?.name ?? 'select a line'
-	);
 	const bobberTriggerContent = $derived(
 		bobbers.find((b) => b.name === selected_bobber)?.name ?? 'select a bobber'
 	);
@@ -66,24 +61,8 @@
 	<div class="grid grid-cols-2 gap-8">
 		<div class="grid grid-cols-1 gap-4">
 			<RodCard rod_names={rods.map((f) => f.name)} bind:selected_rod />
-			
-			<Card.Root>
-				<Card.Header>
-					<h2 class="text-xl font-bold">🧵 Line</h2>
-				</Card.Header>
-				<Card.Content>
-					<Select.Root type="single" bind:value={selected_line}>
-						<Select.Trigger>
-							{lineTriggerContent}
-						</Select.Trigger>
-						<Select.Content>
-							{#each lines as line (line.name)}
-								<Select.Item value={line.name}>{line.name}</Select.Item>
-							{/each}
-						</Select.Content>
-					</Select.Root>
-				</Card.Content>
-			</Card.Root>
+			<LineCard line_names={lines.map((l) => l.name)} bind:selected_line />
+
 			<Card.Root>
 				<Card.Header>
 					<h2 class="text-xl font-bold">🪀 Bobber</h2>
