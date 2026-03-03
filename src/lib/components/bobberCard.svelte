@@ -14,7 +14,7 @@
 	</Card.Header>
 	<Card.Content>
 		<Select.Root type="single" bind:value={selected_bobber}>
-			<Select.Trigger>
+			<Select.Trigger class="w-full">
 				{trigger}
 			</Select.Trigger>
 			<Select.Content>

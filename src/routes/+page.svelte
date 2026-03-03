@@ -55,8 +55,8 @@
 
 <main class="w-full max-w-4xl h-screen max-h-128 px-4">
 	<h1 class="my-2 text-2xl font-bold">FISH! Gear Stats Simulator</h1>
-	<div class="grid grid-cols-2 gap-8">
-		<div class="grid grid-rows-3 gap-4">
+	<div class="grid grid-cols-[1fr_2fr] gap-8">
+		<div class="grid grid-cols-1 gap-4">
 			<RodCard rod_names={rods.map((f) => f.name)} bind:selected_rod />
 			<LineCard line_names={lines.map((l) => l.name)} bind:selected_line />
 			<BobberCard bobber_names={bobbers.map((b) => b.name)} bind:selected_bobber />
