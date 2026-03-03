@@ -8,6 +8,7 @@
 	import BOBBERS_JSON from '../assets/data/bobbers.json';
 
 	import StatsTable from '$lib/components/statsTable.svelte';
+	import RodCard from '$lib/components/rodCard.svelte';
 
 	const parse = (raw: typeof RODS_JSON) =>
 		raw.map((r) => ({
@@ -24,13 +25,13 @@
 	const lines = parse(LINES_JSON);
 	const bobbers = parse(BOBBERS_JSON);
 
+	const line_names = lines.map((l) => l.name);
+	const bobber_names = bobbers.map((b) => b.name);
+
 	let selected_rod: string = $state('');
 	let selected_line: string = $state('');
 	let selected_bobber: string = $state('');
 
-	const rodTriggerContent = $derived(
-		rods.find((r) => r.name === selected_rod)?.name ?? 'select a rod'
-	);
 	const lineTriggerContent = $derived(
 		lines.find((l) => l.name === selected_line)?.name ?? 'select a line'
 	);
@@ -64,23 +65,8 @@
 	<h1 class="my-2 text-2xl font-bold">FISH! Gear Stats Simulator</h1>
 	<div class="grid grid-cols-2 gap-8">
 		<div class="grid grid-cols-1 gap-4">
-			<Card.Root>
-				<Card.Header>
-					<h2 class="text-xl font-bold">🎣 Rod</h2>
-				</Card.Header>
-				<Card.Content>
-					<Select.Root type="single" bind:value={selected_rod}>
-						<Select.Trigger>
-							{rodTriggerContent}
-						</Select.Trigger>
-						<Select.Content>
-							{#each rods as rod (rod.name)}
-								<Select.Item value={rod.name}>{rod.name}</Select.Item>
-							{/each}
-						</Select.Content>
-					</Select.Root>
-				</Card.Content>
-			</Card.Root>
+			<RodCard rod_names={rods.map((f) => f.name)} bind:selected_rod />
+			
 			<Card.Root>
 				<Card.Header>
 					<h2 class="text-xl font-bold">🧵 Line</h2>
