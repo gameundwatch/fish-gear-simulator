@@ -57,14 +57,9 @@
 	<h1 class="my-2 text-2xl font-bold">FISH! Gear Stats Simulator</h1>
 	<div class="grid grid-cols-[1fr_2fr] gap-8">
 		<div class="grid grid-cols-1 gap-4">
-			<RodCard
-				rod_names={rods.map((f) => f.name)}
-				bind:selected_rod
-				rod_enchant_names={rod_enchants.map((f) => f.name)}
-				bind:selected_rod_enchant
-			/>
-			<LineCard line_names={lines.map((l) => l.name)} bind:selected_line />
-			<BobberCard bobber_names={bobbers.map((b) => b.name)} bind:selected_bobber />
+			<RodCard {rods} {rod_enchants} bind:selected_rod bind:selected_rod_enchant />
+			<LineCard {lines} bind:selected_line />
+			<BobberCard {bobbers} bind:selected_bobber />
 		</div>
 		<div class="h-full">
 			<Card.Root>

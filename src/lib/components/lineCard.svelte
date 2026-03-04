@@ -2,7 +2,8 @@
 	import * as Card from '$lib/components/ui/card';
 	import * as Select from '$lib/components/ui/select';
 
-	let { line_names, selected_line = $bindable() } = $props();
+	let { lines, selected_line = $bindable() } = $props();
+	const line_names = $derived(lines.map((l: GearStatsType) => l.name));
 	const trigger = $derived(line_names.find((r: string) => r === selected_line) ?? 'select a line');
 </script>
 

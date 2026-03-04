@@ -2,7 +2,8 @@
 	import * as Card from '$lib/components/ui/card';
 	import * as Select from '$lib/components/ui/select';
 
-	let { bobber_names, selected_bobber = $bindable() } = $props();
+	let { bobbers, selected_bobber = $bindable() } = $props();
+	const bobber_names = $derived(bobbers.map((b) => b.name));
 	const trigger = $derived(
 		bobber_names.find((b: string) => b === selected_bobber) ?? 'select a bobber'
 	);
