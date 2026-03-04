@@ -6,7 +6,7 @@
 </script>
 
 <div
-	class="flex flex-col justify-center items-center w-full h-screen bg-linear-to-b from-indigo-700/50 to-slate-700 text-white"
+	class="flex flex-col justify-center items-center w-full h-screen bg-linear-to-b from-indigo-900 to-slate-900 text-white"
 >
 	{@render children()}
 </div>
