@@ -108,5 +108,103 @@
 		"big_catch_rate": "0",
 		"max_weight": "0",
 		"other": "5% Money"
+	},
+	{
+		"name": "Day Walker",
+		"grade": "uncommon",
+		"luck": "0",
+		"strength": "0",
+		"expertise": "0",
+		"attraction_rate": "0",
+		"big_catch_rate": "0",
+		"max_weight": "0",
+		"other": "",
+		"day": {
+			"luck": "50",
+			"strength": "0",
+			"expertise": "0",
+			"attraction_rate": "0",
+			"big_catch_rate": "0",
+			"max_weight": "0"
+		}
+	},
+	{
+		"name": "Night Stalker",
+		"grade": "uncommon",
+		"luck": "0",
+		"strength": "0",
+		"expertise": "0",
+		"attraction_rate": "0",
+		"big_catch_rate": "0",
+		"max_weight": "0",
+		"other": "",
+		"night": {
+			"luck": "0",
+			"strength": "0",
+			"expertise": "0",
+			"attraction_rate": "35",
+			"big_catch_rate": "0",
+			"max_weight": "0"
+		}
+	},
+	{
+		"name": "Fog Dweller",
+		"grade": "uncommon",
+		"luck": "0",
+		"strength": "0",
+		"expertise": "0",
+		"attraction_rate": "0",
+		"big_catch_rate": "0",
+		"max_weight": "0",
+		"other": "",
+		"foggy": {
+			"luck": "50",
+			"strength": "0",
+			"expertise": "0",
+			"attraction_rate": "0",
+			"big_catch_rate": "0",
+			"max_weight": "0"
+		}
+	},
+	{
+		"name": "Rain Lover",
+		"grade": "uncommon",
+		"luck": "0",
+		"strength": "0",
+		"expertise": "0",
+		"attraction_rate": "0",
+		"big_catch_rate": "0",
+		"max_weight": "0",
+		"other": "",
+		"rainy": {
+			"luck": "50",
+			"strength": "0",
+			"expertise": "0",
+			"attraction_rate": "0",
+			"big_catch_rate": "0",
+			"max_weight": "0"
+		}
+	},
+	{
+		"name": "Power Grip",
+		"grade": "uncommon",
+		"luck": "0",
+		"strength": "15",
+		"expertise": "15",
+		"attraction_rate": "0",
+		"big_catch_rate": "0",
+		"max_weight": "0",
+		"other": ""
+	},
+	{
+		"name": "undecided",
+		"grade": "uncommon",
+		"luck": "5",
+		"strength": "5",
+		"expertise": "5",
+		"attraction_rate": "5",
+		"big_catch_rate": "5",
+		"max_weight": "5",
+		"other": ""
 	}
 ]
