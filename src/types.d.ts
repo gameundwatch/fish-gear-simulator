@@ -17,7 +17,7 @@ type EnchantStatsType = StatsType & {
 	other: string;
 	day?: StatsType;
 	night?: StatsType;
-	rain?: StatsType;
+	rainy?: StatsType;
 	foggy?: StatsType;
 };
 

@@ -26,7 +26,7 @@
 			<Select.Trigger class="w-full">
 				{rodTrigger}
 			</Select.Trigger>
-			<Select.Content>
+			<Select.Content class="dark">
 				{#each rod_names as rod_name (rod_name)}
 					<Select.Item value={rod_name}>{rod_name}</Select.Item>
 				{/each}
@@ -38,7 +38,8 @@
 			<Select.Trigger class="w-full">
 				{rodEnchantTrigger}
 			</Select.Trigger>
-			<Select.Content>
+			<Select.Content class="dark">
+				<Select.Label>Common</Select.Label>
 				{#each rod_enchant_names as rod_enchant_name (rod_enchant_name)}
 					<Select.Item value={rod_enchant_name}>{rod_enchant_name}</Select.Item>
 				{/each}

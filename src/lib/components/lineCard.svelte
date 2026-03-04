@@ -16,7 +16,7 @@
 			<Select.Trigger class="w-full">
 				{trigger}
 			</Select.Trigger>
-			<Select.Content>
+			<Select.Content class="dark">
 				{#each line_names as line_name (line_name)}
 					<Select.Item value={line_name}>{line_name}</Select.Item>
 				{/each}

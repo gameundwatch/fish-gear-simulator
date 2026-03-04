@@ -5,6 +5,8 @@
 	let { children }: { children: Snippet } = $props();
 </script>
 
-<div class="dark flex flex-col justify-center items-center w-full h-screen bg-slate-800 text-white">
+<div
+	class="flex flex-col justify-center items-center w-full h-screen bg-linear-to-b from-indigo-700/50 to-slate-700 text-white"
+>
 	{@render children()}
 </div>

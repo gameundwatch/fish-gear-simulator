@@ -2,6 +2,7 @@
 	import { Button } from '$lib/components/ui/button';
 	import * as Card from '$lib/components/ui/card';
 	import * as Select from '$lib/components/ui/select';
+	import * as ToggleGroup from '$lib/components/ui/toggle-group';
 
 	import RODS_JSON from '../assets/data/rods.json';
 	import LINES_JSON from '../assets/data/lines.json';
@@ -46,6 +47,9 @@
 	let selected_rod_enchant: string = $state('');
 	let selected_line: string = $state('');
 	let selected_bobber: string = $state('');
+	let weather: string = $state('clear');
+	let time: string = $state('day');
+	$inspect(weather);
 
 	const rod = $derived(rods.find((r) => r.name === selected_rod));
 	const rod_enchant = $derived(rod_enchants.find((r) => r.name === selected_rod_enchant));
@@ -54,7 +58,18 @@
 </script>
 
 <main class="w-full max-w-4xl h-screen max-h-128 px-4">
-	<h1 class="my-2 text-2xl font-bold">FISH! Gear Stats Simulator</h1>
+	<div class="w-full grid grid-cols-[1fr_auto_auto] gap-2">
+		<h1 class="my-2 text-2xl font-bold">FISH! Gear Stats Simulator</h1>
+		<ToggleGroup.Root variant="outline" type="single" bind:value={time}>
+			<ToggleGroup.Item value="day" aria-label="Day">Day</ToggleGroup.Item>
+			<ToggleGroup.Item value="night" aria-label="Night">Night</ToggleGroup.Item>
+		</ToggleGroup.Root>
+		<ToggleGroup.Root variant="outline" type="single" bind:value={weather}>
+			<ToggleGroup.Item value="clear" aria-label="Clear">Clear</ToggleGroup.Item>
+			<ToggleGroup.Item value="rainy" aria-label="Rainy">Rainy</ToggleGroup.Item>
+			<ToggleGroup.Item value="foggy" aria-label="Foggy">Foggy</ToggleGroup.Item>
+		</ToggleGroup.Root>
+	</div>
 	<div class="grid grid-cols-[1fr_2fr] gap-8">
 		<div class="grid grid-cols-1 gap-4">
 			<RodCard {rods} {rod_enchants} bind:selected_rod bind:selected_rod_enchant />
