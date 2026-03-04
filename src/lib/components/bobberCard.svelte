@@ -3,7 +3,7 @@
 	import * as Select from '$lib/components/ui/select';
 
 	let { bobbers, selected_bobber = $bindable() } = $props();
-	const bobber_names = $derived(bobbers.map((b) => b.name));
+	const bobber_names = $derived(bobbers.map((b: GearStatsType) => b.name));
 	const trigger = $derived(
 		bobber_names.find((b: string) => b === selected_bobber) ?? 'select a bobber'
 	);
