@@ -66,7 +66,6 @@
 	let selected_bobber: string = $state('Basic Bobber');
 	let weather: Weather = $state('clear');
 	let time: Time = $state('day');
-	$inspect(weather);
 
 	const rod = $derived(rods.find((r) => r.name === selected_rod));
 	const rod_enchant = $derived(rod_enchants.find((r) => r.name === selected_rod_enchant));

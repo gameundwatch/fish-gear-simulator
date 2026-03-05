@@ -18,7 +18,6 @@
 	} = $props();
 
 	const fixed_enchant_stats = $derived(weatherFix(time, weather, rod_enchant));
-	$inspect(fixed_enchant_stats);
 
 	const luck: number = $derived(
 		(rod?.luck ?? 0) + (fixed_enchant_stats.luck ?? 0) + (line?.luck ?? 0) + (bobber?.luck ?? 0)
