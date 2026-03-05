@@ -3,6 +3,7 @@
 	import * as Card from '$lib/components/ui/card';
 	import * as Select from '$lib/components/ui/select';
 	import * as ToggleGroup from '$lib/components/ui/toggle-group';
+	import { CloudFog, CloudRain, CloudSun, MoonStar, Sun } from '@lucide/svelte';
 
 	import RODS_JSON from '../assets/data/rods.json';
 	import LINES_JSON from '../assets/data/lines.json';
@@ -13,6 +14,18 @@
 	import RodCard from '$lib/components/rodCard.svelte';
 	import LineCard from '$lib/components/lineCard.svelte';
 	import BobberCard from '$lib/components/bobberCard.svelte';
+
+	const parseStats = (raw?: StatsJsonType): StatsType | undefined => {
+		if (!raw) return undefined;
+		return {
+			luck: Number(raw.luck),
+			strength: Number(raw.strength),
+			expertise: Number(raw.expertise),
+			attractionRate: Number(raw.attraction_rate),
+			bigCatchRate: Number(raw.big_catch_rate),
+			maxWeight: Number(raw.max_weight),
+		};
+	};
 
 	const parseGear = (raw: GearStatsJsonType[]): GearStatsType[] =>
 		raw.map((r) => ({
@@ -36,6 +49,10 @@
 			attractionRate: Number(r.attraction_rate),
 			bigCatchRate: Number(r.big_catch_rate),
 			maxWeight: Number(r.max_weight),
+			day: parseStats(r.day),
+			night: parseStats(r.night),
+			rainy: parseStats(r.rainy),
+			foggy: parseStats(r.foggy),
 		}));
 
 	const rods = parseGear(RODS_JSON);
@@ -43,12 +60,12 @@
 	const lines = parseGear(LINES_JSON);
 	const bobbers = parseGear(BOBBERS_JSON);
 
-	let selected_rod: string = $state('');
+	let selected_rod: string = $state('Stick and String');
 	let selected_rod_enchant: string = $state('');
-	let selected_line: string = $state('');
-	let selected_bobber: string = $state('');
-	let weather: string = $state('clear');
-	let time: string = $state('day');
+	let selected_line: string = $state('Basic Line');
+	let selected_bobber: string = $state('Basic Bobber');
+	let weather: Weather = $state('clear');
+	let time: Time = $state('day');
 	$inspect(weather);
 
 	const rod = $derived(rods.find((r) => r.name === selected_rod));
@@ -61,13 +78,13 @@
 	<div class="w-full grid grid-cols-[1fr_auto_auto] gap-2">
 		<h1 class="my-2 text-2xl font-bold">FISH! Gear Stats Simulator</h1>
 		<ToggleGroup.Root variant="outline" type="single" bind:value={time}>
-			<ToggleGroup.Item value="day" aria-label="Day">Day</ToggleGroup.Item>
-			<ToggleGroup.Item value="night" aria-label="Night">Night</ToggleGroup.Item>
+			<ToggleGroup.Item value="day" aria-label="Day"><CloudSun /></ToggleGroup.Item>
+			<ToggleGroup.Item value="night" aria-label="Night"><MoonStar /></ToggleGroup.Item>
 		</ToggleGroup.Root>
 		<ToggleGroup.Root variant="outline" type="single" bind:value={weather}>
-			<ToggleGroup.Item value="clear" aria-label="Clear">Clear</ToggleGroup.Item>
-			<ToggleGroup.Item value="rainy" aria-label="Rainy">Rainy</ToggleGroup.Item>
-			<ToggleGroup.Item value="foggy" aria-label="Foggy">Foggy</ToggleGroup.Item>
+			<ToggleGroup.Item value="clear" aria-label="Clear"><Sun /></ToggleGroup.Item>
+			<ToggleGroup.Item value="rainy" aria-label="Rainy"><CloudRain /></ToggleGroup.Item>
+			<ToggleGroup.Item value="foggy" aria-label="Foggy"><CloudFog /></ToggleGroup.Item>
 		</ToggleGroup.Root>
 	</div>
 	<div class="grid grid-cols-[1fr_2fr] gap-8">
@@ -82,7 +99,7 @@
 					<h2 class="text-xl font-bold">Final Stats</h2>
 				</Card.Header>
 				<Card.Content class="grid grid-cols-1">
-					<StatsTable {rod} {rod_enchant} {line} {bobber} />
+					<StatsTable {rod} {rod_enchant} {line} {bobber} {time} {weather} />
 				</Card.Content>
 			</Card.Root>
 		</div>

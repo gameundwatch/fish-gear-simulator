@@ -1,3 +1,6 @@
+type Time = 'day' | 'night';
+type Weather = 'clear' | 'rainy' | 'foggy';
+
 type StatsType = {
 	luck: number;
 	strength: number;
@@ -43,6 +46,6 @@ type EnchantStatsJsonType = StatsJsonType & {
 	other: string;
 	day?: StatsJsonType;
 	night?: StatsJsonType;
-	rain?: StatsJsonType;
+	rainy?: StatsJsonType;
 	foggy?: StatsJsonType;
 };

@@ -17,7 +17,7 @@
 		"strength": "10",
 		"expertise": "0",
 		"attraction_rate": "0",
-		"big_catch_rate": "10",
+		"big_catch_rate": "0",
 		"max_weight": "0",
 		"other": ""
 	},
@@ -28,7 +28,7 @@
 		"strength": "0",
 		"expertise": "10",
 		"attraction_rate": "0",
-		"big_catch_rate": "10",
+		"big_catch_rate": "0",
 		"max_weight": "0",
 		"other": ""
 	},
@@ -197,7 +197,7 @@
 		"other": ""
 	},
 	{
-		"name": "undecided",
+		"name": "Undecided",
 		"grade": "uncommon",
 		"luck": "5",
 		"strength": "5",
@@ -206,5 +206,49 @@
 		"big_catch_rate": "5",
 		"max_weight": "5",
 		"other": ""
+	},
+	{
+		"name": "Inpatient",
+		"grade": "uncommon",
+		"luck": "-30",
+		"strength": "0",
+		"expertise": "0",
+		"attraction_rate": "30",
+		"big_catch_rate": "0",
+		"max_weight": "0",
+		"other": ""
+	},
+	{
+		"name": "Tubby Chaser",
+		"grade": "uncommon",
+		"luck": "0",
+		"strength": "0",
+		"expertise": "0",
+		"attraction_rate": "0",
+		"big_catch_rate": "5",
+		"max_weight": "1000",
+		"other": ""
+	},
+	{
+		"name": "Student",
+		"grade": "uncommon",
+		"luck": "0",
+		"strength": "0",
+		"expertise": "5",
+		"attraction_rate": "0",
+		"big_catch_rate": "0",
+		"max_weight": "0",
+		"other": "+12% XP"
+	},
+	{
+		"name": "Unstable",
+		"grade": "uncommon",
+		"luck": "10",
+		"strength": "-10",
+		"expertise": "-10",
+		"attraction_rate": "0",
+		"big_catch_rate": "0",
+		"max_weight": "0",
+		"other": "1.5x Mutation rate"
 	}
 ]

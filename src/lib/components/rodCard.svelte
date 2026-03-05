@@ -8,6 +8,33 @@
 		selected_rod = $bindable(),
 		selected_rod_enchant = $bindable(),
 	} = $props();
+
+	const common_rod_enchant_names = $derived(
+		rod_enchants
+			.filter((f: EnchantStatsType) => f.grade === 'common')
+			.map((f: EnchantStatsType) => f.name)
+	);
+	const uncommon_rod_enchant_names = $derived(
+		rod_enchants
+			.filter((f: EnchantStatsType) => f.grade === 'uncommon')
+			.map((f: EnchantStatsType) => f.name)
+	);
+	const rare_rod_enchant_names = $derived(
+		rod_enchants
+			.filter((f: EnchantStatsType) => f.grade === 'rare')
+			.map((f: EnchantStatsType) => f.name)
+	);
+	const epic_rod_enchant_names = $derived(
+		rod_enchants
+			.filter((f: EnchantStatsType) => f.grade === 'epic')
+			.map((f: EnchantStatsType) => f.name)
+	);
+	const legendary_rod_enchant_names = $derived(
+		rod_enchants
+			.filter((f: EnchantStatsType) => f.grade === 'legendary')
+			.map((f: EnchantStatsType) => f.name)
+	);
+
 	const rod_names = $derived(rods.map((f: GearStatsType) => f.name));
 	const rod_enchant_names = $derived(rod_enchants.map((f: EnchantStatsType) => f.name));
 	const rodTrigger = $derived(rod_names.find((r: string) => r === selected_rod) ?? 'select a rod');
@@ -40,8 +67,33 @@
 			</Select.Trigger>
 			<Select.Content class="dark">
 				<Select.Label>Common</Select.Label>
-				{#each rod_enchant_names as rod_enchant_name (rod_enchant_name)}
-					<Select.Item value={rod_enchant_name}>{rod_enchant_name}</Select.Item>
+				{#each common_rod_enchant_names as rod_enchant_name (rod_enchant_name)}
+					<Select.Item class="text-green-400" value={rod_enchant_name}
+						>{rod_enchant_name}</Select.Item
+					>
+				{/each}
+				<Select.Label>Uncommon</Select.Label>
+				{#each uncommon_rod_enchant_names.filter( (r: string) => rod_enchant_names.includes(r) ) as rod_enchant_name (rod_enchant_name)}
+					<Select.Item class="text-blue-400" value={rod_enchant_name}
+						>{rod_enchant_name}</Select.Item
+					>
+				{/each}
+				<Select.Label>Rare</Select.Label>
+				{#each rare_rod_enchant_names.filter( (r: string) => rod_enchant_names.includes(r) ) as rod_enchant_name (rod_enchant_name)}
+					<Select.Item class="text-purple-400" value={rod_enchant_name}
+						>{rod_enchant_name}</Select.Item
+					>
+				{/each}
+				<Select.Label>Epic</Select.Label>
+				{#each epic_rod_enchant_names.filter( (r: string) => rod_enchant_names.includes(r) ) as rod_enchant_name (rod_enchant_name)}
+					<Select.Item class="text-yellow-400" value={rod_enchant_name}
+						>{rod_enchant_name}</Select.Item
+					>
+				{/each}
+				<Select.Label>Legendary</Select.Label>
+				{#each legendary_rod_enchant_names.filter( (r: string) => rod_enchant_names.includes(r) ) as rod_enchant_name (rod_enchant_name)}
+					<Select.Item class="text-red-400" value={rod_enchant_name}>{rod_enchant_name}</Select.Item
+					>
 				{/each}
 			</Select.Content>
 		</Select.Root>

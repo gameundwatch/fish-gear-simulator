@@ -1,38 +1,57 @@
 <script lang="ts">
 	import * as Table from '$lib/components/ui/table';
-	const { rod, rod_enchant, line, bobber } = $props();
+	import { weatherFix } from '../../weatherFix';
+	const {
+		rod,
+		rod_enchant,
+		line,
+		bobber,
+		time,
+		weather,
+	}: {
+		rod?: GearStatsType;
+		rod_enchant?: EnchantStatsType;
+		line?: GearStatsType;
+		bobber?: GearStatsType;
+		time: Time;
+		weather: Weather;
+	} = $props();
+
+	const fixed_enchant_stats = $derived(weatherFix(time, weather, rod_enchant));
+	$inspect(fixed_enchant_stats);
+
 	const luck: number = $derived(
-		(rod?.luck ?? 0) + (rod_enchant?.luck ?? 0) + (line?.luck ?? 0) + (bobber?.luck ?? 0)
+		(rod?.luck ?? 0) + (fixed_enchant_stats.luck ?? 0) + (line?.luck ?? 0) + (bobber?.luck ?? 0)
 	);
 	const strength: number = $derived(
 		(rod?.strength ?? 0) +
-			(rod_enchant?.strength ?? 0) +
 			(line?.strength ?? 0) +
-			(bobber?.strength ?? 0)
+			(bobber?.strength ?? 0) +
+			(fixed_enchant_stats.strength ?? 0)
 	);
 	const expertise: number = $derived(
 		(rod?.expertise ?? 0) +
-			(rod_enchant?.expertise ?? 0) +
 			(line?.expertise ?? 0) +
-			(bobber?.expertise ?? 0)
+			(bobber?.expertise ?? 0) +
+			(fixed_enchant_stats.expertise ?? 0)
 	);
 	const attractionRate: number = $derived(
 		(rod?.attractionRate ?? 0) +
-			(rod_enchant?.attractionRate ?? 0) +
 			(line?.attractionRate ?? 0) +
-			(bobber?.attractionRate ?? 0)
+			(bobber?.attractionRate ?? 0) +
+			(fixed_enchant_stats.attractionRate ?? 0)
 	);
 	const bigCatchRate: number = $derived(
 		(rod?.bigCatchRate ?? 0) +
-			(rod_enchant?.bigCatchRate ?? 0) +
 			(line?.bigCatchRate ?? 0) +
-			(bobber?.bigCatchRate ?? 0)
+			(bobber?.bigCatchRate ?? 0) +
+			(fixed_enchant_stats.bigCatchRate ?? 0)
 	);
 	const maxWeight: number = $derived(
 		(rod?.maxWeight ?? 0) +
-			(rod_enchant?.maxWeight ?? 0) +
 			(line?.maxWeight ?? 0) +
-			(bobber?.maxWeight ?? 0)
+			(bobber?.maxWeight ?? 0) +
+			(fixed_enchant_stats.maxWeight ?? 0)
 	);
 </script>
 
@@ -51,7 +70,7 @@
 		<Table.Row class="text-yellow-500">
 			<Table.Cell class="font-bold"><span class="text-xl">🍀</span> Luck</Table.Cell>
 			<Table.Cell class="text-right">{rod?.luck ?? 0}</Table.Cell>
-			<Table.Cell class="text-right">{rod_enchant?.luck ?? 0}</Table.Cell>
+			<Table.Cell class="text-right">{fixed_enchant_stats?.luck ?? 0}</Table.Cell>
 			<Table.Cell class="text-right">{line?.luck ?? 0}</Table.Cell>
 			<Table.Cell class="text-right">{bobber?.luck ?? 0}</Table.Cell>
 			<Table.Cell class="text-right font-semibold">{luck}</Table.Cell>
@@ -59,7 +78,7 @@
 		<Table.Row class="text-red-500">
 			<Table.Cell class="font-bold"><span class="text-xl">💪</span> Strength</Table.Cell>
 			<Table.Cell class="text-right">{rod?.strength ?? 0}</Table.Cell>
-			<Table.Cell class="text-right">{rod_enchant?.strength ?? 0}</Table.Cell>
+			<Table.Cell class="text-right">{fixed_enchant_stats?.strength ?? 0}</Table.Cell>
 			<Table.Cell class="text-right">{line?.strength ?? 0}</Table.Cell>
 			<Table.Cell class="text-right">{bobber?.strength ?? 0}</Table.Cell>
 			<Table.Cell class="text-right font-semibold">{strength}</Table.Cell>
@@ -67,7 +86,7 @@
 		<Table.Row class="text-cyan-500">
 			<Table.Cell class="font-bold"><span class="text-xl">🎓</span> Expertise</Table.Cell>
 			<Table.Cell class="text-right">{rod?.expertise ?? 0}</Table.Cell>
-			<Table.Cell class="text-right">{rod_enchant?.expertise ?? 0}</Table.Cell>
+			<Table.Cell class="text-right">{fixed_enchant_stats?.expertise ?? 0}</Table.Cell>
 			<Table.Cell class="text-right">{line?.expertise ?? 0}</Table.Cell>
 			<Table.Cell class="text-right">{bobber?.expertise ?? 0}</Table.Cell>
 			<Table.Cell class="text-right font-semibold">{expertise}</Table.Cell>
@@ -75,7 +94,7 @@
 		<Table.Row class="text-green-500">
 			<Table.Cell class="font-bold"><span class="text-xl">🐡</span> Attraction Rate</Table.Cell>
 			<Table.Cell class="text-right">{rod?.attractionRate ?? 0}</Table.Cell>
-			<Table.Cell class="text-right">{rod_enchant?.attractionRate ?? 0}</Table.Cell>
+			<Table.Cell class="text-right">{fixed_enchant_stats?.attractionRate ?? 0}</Table.Cell>
 			<Table.Cell class="text-right">{line?.attractionRate ?? 0}</Table.Cell>
 			<Table.Cell class="text-right">{bobber?.attractionRate ?? 0}</Table.Cell>
 			<Table.Cell class="text-right font-semibold">{attractionRate}</Table.Cell>
@@ -83,7 +102,7 @@
 		<Table.Row class="text-orange-500">
 			<Table.Cell class="font-bold"><span class="text-xl">🦈</span> Big Catch Rate</Table.Cell>
 			<Table.Cell class="text-right">{rod?.bigCatchRate ?? 0}</Table.Cell>
-			<Table.Cell class="text-right">{rod_enchant?.bigCatchRate ?? 0}</Table.Cell>
+			<Table.Cell class="text-right">{fixed_enchant_stats?.bigCatchRate ?? 0}</Table.Cell>
 			<Table.Cell class="text-right">{line?.bigCatchRate ?? 0}</Table.Cell>
 			<Table.Cell class="text-right">{bobber?.bigCatchRate ?? 0}</Table.Cell>
 			<Table.Cell class="text-right font-semibold">{bigCatchRate}</Table.Cell>
@@ -91,7 +110,9 @@
 		<Table.Row class="text-purple-500">
 			<Table.Cell class="font-bold"><span class="text-xl">⚖️</span> Max Weight</Table.Cell>
 			<Table.Cell class="text-right">{(rod?.maxWeight ?? 0).toLocaleString()}</Table.Cell>
-			<Table.Cell class="text-right">{(rod_enchant?.maxWeight ?? 0).toLocaleString()}</Table.Cell>
+			<Table.Cell class="text-right"
+				>{(fixed_enchant_stats?.maxWeight ?? 0).toLocaleString()}</Table.Cell
+			>
 			<Table.Cell class="text-right">{(line?.maxWeight ?? 0).toLocaleString()}</Table.Cell>
 			<Table.Cell class="text-right">{(bobber?.maxWeight ?? 0).toLocaleString()}</Table.Cell>
 			<Table.Cell class="text-right font-semibold">{maxWeight.toLocaleString()}</Table.Cell>
