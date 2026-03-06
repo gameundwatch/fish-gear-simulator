@@ -85,7 +85,7 @@
 		"attraction_rate": "0",
 		"big_catch_rate": "10",
 		"max_weight": "0",
-		"other": "+5 EXP"
+		"other": "+5 XP"
 	},
 	{
 		"name": "Lazy",
@@ -250,5 +250,263 @@
 		"big_catch_rate": "0",
 		"max_weight": "0",
 		"other": "1.5x Mutation rate"
+	},
+	{
+		"name": "All-Rounder",
+		"grade": "rare",
+		"luck": "10",
+		"strength": "10",
+		"expertise": "10",
+		"attraction_rate": "10",
+		"big_catch_rate": "10",
+		"max_weight": "100",
+		"other": ""
+	},
+	{
+		"name": "Patient",
+		"grade": "rare",
+		"luck": "100",
+		"strength": "0",
+		"expertise": "0",
+		"attraction_rate": "-40",
+		"big_catch_rate": "0",
+		"max_weight": "0",
+		"other": ""
+	},
+	{
+		"name": "Luck Sacrifice",
+		"grade": "rare",
+		"luck": "-60",
+		"strength": "0",
+		"expertise": "0",
+		"attraction_rate": "60",
+		"big_catch_rate": "0",
+		"max_weight": "0",
+		"other": ""
+	},
+	{
+		"name": "Light Speed Reels",
+		"grade": "rare",
+		"luck": "0",
+		"strength": "0",
+		"expertise": "0",
+		"attraction_rate": "40",
+		"big_catch_rate": "0",
+		"max_weight": "0",
+		"other": ""
+	},
+	{
+		"name": "Mouth Watering",
+		"grade": "rare",
+		"luck": "0",
+		"strength": "0",
+		"expertise": "0",
+		"attraction_rate": "25",
+		"big_catch_rate": "30",
+		"max_weight": "0",
+		"other": ""
+	},
+	{
+		"name": "Notoriously Big",
+		"grade": "rare",
+		"luck": "0",
+		"strength": "0",
+		"expertise": "0",
+		"attraction_rate": "0",
+		"big_catch_rate": "10",
+		"max_weight": "50000",
+		"other": ""
+	},
+	{
+		"name": "Demon Hunter",
+		"grade": "rare",
+		"luck": "0",
+		"strength": "10",
+		"expertise": "0",
+		"attraction_rate": "0",
+		"big_catch_rate": "0",
+		"max_weight": "0",
+		"other": "15% chance to catch Cursed"
+	},
+	{
+		"name": "Dimensional Line",
+		"grade": "rare",
+		"luck": "0",
+		"strength": "0",
+		"expertise": "10",
+		"attraction_rate": "0",
+		"big_catch_rate": "0",
+		"max_weight": "0",
+		"other": "All biome fish cactchable by 30%"
+	},
+	{
+		"name": "Enlightened",
+		"grade": "rare",
+		"luck": "0",
+		"strength": "0",
+		"expertise": "10",
+		"attraction_rate": "0",
+		"big_catch_rate": "0",
+		"max_weight": "0",
+		"other": "+35% XP"
+	},
+	{
+		"name": "The Night Watcher",
+		"grade": "rare",
+		"luck": "0",
+		"strength": "0",
+		"expertise": "0",
+		"attraction_rate": "0",
+		"big_catch_rate": "0",
+		"max_weight": "0",
+		"other": "",
+		"night": {
+			"luck": "30",
+			"strength": "10",
+			"expertise": "10",
+			"attraction_rate": "30",
+			"big_catch_rate": "30",
+			"max_weight": "25000"
+		}
+	},
+	{
+		"name": "Master of Balance",
+		"grade": "epic",
+		"luck": "20",
+		"strength": "20",
+		"expertise": "20",
+		"attraction_rate": "20",
+		"big_catch_rate": "20",
+		"max_weight": "400",
+		"other": ""
+	},
+	{
+		"name": "Luck of Chosen",
+		"grade": "epic",
+		"luck": "100",
+		"strength": "0",
+		"expertise": "0",
+		"attraction_rate": "0",
+		"big_catch_rate": "10",
+		"max_weight": "0",
+		"other": ""
+	},
+	{
+		"name": "BIG BOYS ONLY",
+		"grade": "epic",
+		"luck": "0",
+		"strength": "0",
+		"expertise": "0",
+		"attraction_rate": "0",
+		"big_catch_rate": "65",
+		"max_weight": "100000",
+		"other": ""
+	},
+	{
+		"name": "Double Up!!",
+		"grade": "epic",
+		"luck": "20",
+		"strength": "0",
+		"expertise": "0",
+		"attraction_rate": "0",
+		"big_catch_rate": "0",
+		"max_weight": "0",
+		"other": "duplicate fish by 25%"
+	},
+	{
+		"name": "Money Maker",
+		"grade": "epic",
+		"luck": "0",
+		"strength": "0",
+		"expertise": "0",
+		"attraction_rate": "0",
+		"big_catch_rate": "20",
+		"max_weight": "0",
+		"other": "20% Money"
+	},
+	{
+		"name": "Mutator",
+		"grade": "epic",
+		"luck": "30",
+		"strength": "0",
+		"expertise": "0",
+		"attraction_rate": "0",
+		"big_catch_rate": "0",
+		"max_weight": "0",
+		"other": "2x Mutation Rate"
+	},
+	{
+		"name": "Shiny Hunter",
+		"grade": "epic",
+		"luck": "80",
+		"strength": "0",
+		"expertise": "0",
+		"attraction_rate": "0",
+		"big_catch_rate": "0",
+		"max_weight": "0",
+		"other": "20% chance to catch Shiny"
+	},
+	{
+		"name": "Speed Demon",
+		"grade": "epic",
+		"luck": "0",
+		"strength": "0",
+		"expertise": "0",
+		"attraction_rate": "60",
+		"big_catch_rate": "0",
+		"max_weight": "0",
+		"other": "5% chance to catch Cursed"
+	},
+	{
+		"name": "Son of Kriptan",
+		"grade": "epic",
+		"luck": "0",
+		"strength": "0",
+		"expertise": "0",
+		"attraction_rate": "0",
+		"big_catch_rate": "0",
+		"max_weight": "0",
+		"day": {
+			"luck": "50",
+			"strength": "10",
+			"expertise": "10",
+			"attraction_rate": "50",
+			"big_catch_rate": "50",
+			"max_weight": "50000"
+		},
+		"other": ""
+	},
+	{
+		"name": "God's Own Luck",
+		"grade": "legendary",
+		"luck": "250",
+		"strength": "0",
+		"expertise": "0",
+		"attraction_rate": "0",
+		"big_catch_rate": "0",
+		"max_weight": "0",
+		"other": ""
+	},
+	{
+		"name": "Messenger of the Heavens",
+		"grade": "legendary",
+		"luck": "0",
+		"strength": "0",
+		"expertise": "0",
+		"attraction_rate": "100",
+		"big_catch_rate": "0",
+		"max_weight": "0",
+		"other": ""
+	},
+	{
+		"name": "Strongest Angler",
+		"grade": "legendary",
+		"luck": "20",
+		"strength": "85",
+		"expertise": "85",
+		"attraction_rate": "10",
+		"big_catch_rate": "20",
+		"max_weight": "1000000",
+		"other": ""
 	}
 ]
