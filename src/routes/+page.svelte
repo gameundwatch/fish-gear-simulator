@@ -14,6 +14,7 @@
 	import RodCard from '$lib/components/rodCard.svelte';
 	import LineCard from '$lib/components/lineCard.svelte';
 	import BobberCard from '$lib/components/bobberCard.svelte';
+	import Badge from '$lib/components/ui/badge/badge.svelte';
 
 	const parseStats = (raw?: StatsJsonType): StatsType | undefined => {
 		if (!raw) return undefined;
@@ -92,15 +93,18 @@
 			<LineCard {lines} bind:selected_line />
 			<BobberCard {bobbers} bind:selected_bobber />
 		</div>
-		<div class="h-full">
-			<Card.Root>
-				<Card.Header>
-					<h2 class="text-xl font-bold">Final Stats</h2>
-				</Card.Header>
-				<Card.Content class="grid grid-cols-1">
-					<StatsTable {rod} {rod_enchant} {line} {bobber} {time} {weather} />
-				</Card.Content>
-			</Card.Root>
-		</div>
+		<Card.Root>
+			<Card.Header>
+				<h2 class="text-xl font-bold">Final Stats</h2>
+			</Card.Header>
+			<Card.Content class="grid grid-rows-[auto_1fr] gap-4">
+				<StatsTable {rod} {rod_enchant} {line} {bobber} {time} {weather} />
+				{#if rod_enchant?.other}
+					<Badge class="bg-purple-700 text-white text-xs">
+						<p>{rod_enchant?.other}</p>
+					</Badge>
+				{/if}
+			</Card.Content>
+		</Card.Root>
 	</div>
 </main>
