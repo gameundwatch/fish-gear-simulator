@@ -18,7 +18,7 @@
 			<Select.Trigger class="w-full">
 				{trigger}
 			</Select.Trigger>
-			<Select.Content class="dark">
+			<Select.Content>
 				{#each bobber_names as bobber_name (bobber_name)}
 					<Select.Item value={bobber_name}>{bobber_name}</Select.Item>
 				{/each}
